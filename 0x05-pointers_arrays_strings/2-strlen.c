@@ -1,12 +1,13 @@
 #include "main.h"
 
 /**
- * _strien -length of a string
+ * _strlen - Function that return the length of a string
+ *
  * @s: this is the input string
  *
- * Return: length of the string
+ * Return: Length of the string
  */
-int _strlem(char *s)
+int _strlen(char *s)
 {
 	int index;
 
