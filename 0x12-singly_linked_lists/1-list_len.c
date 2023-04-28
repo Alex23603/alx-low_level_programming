@@ -1,22 +1,20 @@
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include "lists.h"
 
 /**
- * insertNode - adds a new node at the beginning of a linked list
- * @head: double pointer to the head of the list
- * @data: new data to be added to the node
+ * list_len - returns the number of elements in a linked list
+ * @h: pointer to the list_t list
  *
- * Return: void
+ * Return: number of elements in h
  */
-void insertNode(struct Node **head, char *data)
+size_t list_len(const list_t *h)
 {
-	struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
+	size_t n = 0;
 
-	if (newNode == NULL)
-		return;
-
-	strcpy(newNode->data, data);
-	newNode->next = *head;
-	*head = newNode;
+	while (h)
+	{
+		n++;
+		h = h->next;
+	}
+	return (n);
 }
